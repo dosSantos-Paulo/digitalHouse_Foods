@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import androidx.navigation.Navigation
 
@@ -26,6 +27,10 @@ class SignupFragment : Fragment() {
 
         view.findViewById<ImageView>(R.id.img_back_signup).setOnClickListener {
             navController.navigate(R.id.action_signupFragment2_to_loginFragment)
+        }
+
+        view.findViewById<Button>(R.id.btn_register_signup).setOnClickListener {
+            navController.navigate(R.id.action_signupFragment2_to_restaurantListFragment)
         }
     }
 

@@ -25,6 +25,10 @@ class LoginFragment : Fragment() {
         view.findViewById<Button>(R.id.btn_register_login).setOnClickListener {
             navController.navigate(R.id.action_loginFragment_to_signupFragment2)
         }
+
+        view.findViewById<Button>(R.id.btn_login_login).setOnClickListener {
+            navController.navigate(R.id.action_loginFragment_to_restaurantListFragment)
+        }
     }
 
 }
