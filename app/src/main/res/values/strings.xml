@@ -8,4 +8,7 @@
     <string name="login">Log In</string>
     <string name="or">or</string>
     <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="back_arrow">Back Arrow</string>
 </resources>

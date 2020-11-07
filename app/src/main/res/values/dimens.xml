@@ -10,4 +10,5 @@
     <dimen name="text_Medium">16sp</dimen>
     <dimen name="text_Small">12sp</dimen>
     <dimen name="topMarginDiv">13dp</dimen>
+    <dimen name="arrow_size">25dp</dimen>
 </resources>

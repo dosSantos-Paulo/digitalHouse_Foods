@@ -11,16 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/actionBar"
         android:background="@color/colorPrimary"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_Medium">
+
+        <ImageView
+            android:id="@+id/img_back_signup"
+            android:layout_width="@dimen/arrow_size"
+            android:layout_height="@dimen/arrow_size"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:clickable="true"
+            app:tint="@color/colorWhite"
+            android:layout_marginEnd="@dimen/margin_Medium"
+            android:focusable="true"
+            android:contentDescription="@string/back_arrow" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto"
-            android:text="Register"
+            android:text="@string/register"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/title"
-            android:layout_margin="@dimen/margin_Medium"
             />
 
     </LinearLayout>
@@ -32,12 +43,29 @@
         android:padding="@dimen/margin_Medium">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_email_login"
+            android:id="@+id/edt_name_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            app:boxBackgroundColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/margin_Large"
+            android:layout_marginBottom="@dimen/margin_Small"
+            app:hintTextColor="@color/colorGray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_email_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
             app:boxBackgroundColor="@color/colorWhite"
-            android:layout_marginTop="@dimen/margin_Large"
             android:layout_marginBottom="@dimen/margin_Small"
             app:hintTextColor="@color/colorGray">
 
@@ -50,10 +78,27 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_password_login"
+            android:id="@+id/edt_password_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            app:boxBackgroundColor="@color/colorWhite"
+            android:layout_marginBottom="@dimen/margin_Small"
+            app:hintTextColor="@color/colorGray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_repeatPassword_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/repeat_password"
             app:boxBackgroundColor="@color/colorWhite"
             android:layout_marginBottom="@dimen/margin_Large"
             app:hintTextColor="@color/colorGray">
@@ -66,55 +111,23 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btn_login_login"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/buttonHeight"
-            android:backgroundTint="@color/buttonColor"
-            android:text="@string/login"/>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_Large">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
 
-            <View
+            <Button
+                android:id="@+id/btn_register_signup"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/colorGray"
-                android:focusable="false"
-                android:layout_weight="1"
-                android:layout_marginTop="@dimen/topMarginDiv"
-                android:layout_marginEnd="@dimen/margin_Small"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/or"
-                android:textSize="@dimen/text_Medium"
-                android:textColor="@color/colorGray"
-                android:fontFamily="@font/roboto"
-                android:textAllCaps="true"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/colorGray"
-                android:focusable="false"
-                android:layout_weight="1"
-                android:layout_marginTop="@dimen/topMarginDiv"
-                android:layout_marginStart="@dimen/margin_Small"/>
+                android:layout_height="@dimen/buttonHeight"
+                android:backgroundTint="@color/buttonColor"
+                android:text="@string/register"
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_register_login"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/buttonHeight"
-            android:backgroundTint="@color/colorGray"
-            android:text="@string/register"
-            android:layout_marginTop="@dimen/margin_ExtraLarge"/>
+
 
     </LinearLayout>
 
