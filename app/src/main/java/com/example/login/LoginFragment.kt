@@ -9,14 +9,6 @@ import androidx.navigation.Navigation
 
 class LoginFragment : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,13 +22,4 @@ class LoginFragment : Fragment() {
         val navController = Navigation.findNavController(view)
     }
 
-    companion object {
-
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
-    }
 }

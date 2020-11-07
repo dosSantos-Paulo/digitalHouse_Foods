@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionBar">62dp</dimen>
+    <dimen name="buttonHeight">60dp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="margin_Medium">18dp</dimen>
+    <dimen name="margin_Large">30dp</dimen>
+    <dimen name="margin_ExtraLarge">80dp</dimen>
+    <dimen name="margin_Small">8dp</dimen>
+    <dimen name="text_Medium">16sp</dimen>
+    <dimen name="text_Small">12sp</dimen>
+    <dimen name="topMarginDiv">13dp</dimen>
+</resources>
