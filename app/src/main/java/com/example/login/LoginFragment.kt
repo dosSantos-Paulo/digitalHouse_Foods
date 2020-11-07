@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.Navigation
 
 class LoginFragment : Fragment() {
@@ -20,6 +21,10 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val navController = Navigation.findNavController(view)
+
+        view.findViewById<Button>(R.id.btn_register_login).setOnClickListener {
+            navController.navigate(R.id.action_loginFragment_to_signupFragment2)
+        }
     }
 
 }
