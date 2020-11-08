@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.navigation.Navigation
+import com.google.android.material.textfield.TextInputLayout
+import org.w3c.dom.Text
 
 
 class SignupFragment : Fragment() {
@@ -24,13 +26,48 @@ class SignupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val navController = Navigation.findNavController(view)
+        val name = view.findViewById<TextInputLayout>(R.id.edt_name_signup).editText
+        val email = view.findViewById<TextInputLayout>(R.id.edt_email_signup).editText
+        val password = view.findViewById<TextInputLayout>(R.id.edt_password_signup).editText
+        val repeatPassword = view.findViewById<TextInputLayout>(R.id.edt_repeatPassword_signup).editText
 
         view.findViewById<ImageView>(R.id.img_back_signup).setOnClickListener {
             navController.navigate(R.id.action_signupFragment2_to_loginFragment)
         }
 
         view.findViewById<Button>(R.id.btn_register_signup).setOnClickListener {
-            navController.navigate(R.id.action_signupFragment2_to_restaurantListFragment)
+            when {
+                name?.text.isNullOrEmpty() -> name?.error = getString(R.string.digite_o_nome)
+            }
+            when {
+                email?.text.isNullOrEmpty() -> email?.error = getString(R.string.digite_o_email)
+            }
+            when {
+                password?.text.isNullOrEmpty() -> password?.error = getString(R.string.digite_a_senha)
+            }
+            when {
+                repeatPassword?.text.isNullOrEmpty() -> repeatPassword?.error = getString(R.string.digite_a_senha)
+            }
+            if (!(name?.text.isNullOrEmpty())
+                && !(email?.text.isNullOrEmpty())
+                && !(password?.text.isNullOrEmpty())
+                && !(repeatPassword?.text.isNullOrEmpty())){
+
+
+                when {
+                    password?.text.toString().trim().length > 12 || password?.text.toString().trim().length < 4 -> {
+                        password?.error = getString(R.string.deve_conter)
+                    }
+                    password?.text.toString().trim() != repeatPassword?.text.toString().trim() -> {
+                        repeatPassword?.error = getString(
+                            R.string.as_senhas_devem_ser_iguais)
+                    }
+                    else ->  navController.navigate(R.id.action_signupFragment2_to_restaurantListFragment)
+
+                }
+            }
+
+
         }
     }
 

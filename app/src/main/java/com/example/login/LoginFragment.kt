@@ -41,7 +41,6 @@ class LoginFragment : Fragment() {
             if (!(email?.text.isNullOrEmpty()) && !(password?.text.isNullOrEmpty())) {
                 navController.navigate(R.id.action_loginFragment_to_restaurantListFragment)
             }
-            
         }
     }
 

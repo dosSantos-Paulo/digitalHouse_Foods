@@ -13,4 +13,7 @@
     <string name="back_arrow">Back Arrow</string>
     <string name="digite_o_email">Digite o Email</string>
     <string name="digite_a_senha">Digite a senha</string>
+    <string name="digite_o_nome">Digite o nome</string>
+    <string name="as_senhas_devem_ser_iguais">As senhas devem ser iguais</string>
+    <string name="deve_conter">Deve conter entre 4 e 12 caracteres</string>
 </resources>
