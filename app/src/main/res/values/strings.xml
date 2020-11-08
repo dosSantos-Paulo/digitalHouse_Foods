@@ -11,4 +11,6 @@
     <string name="name">Name</string>
     <string name="repeat_password">Repeat password</string>
     <string name="back_arrow">Back Arrow</string>
+    <string name="digite_o_email">Digite o Email</string>
+    <string name="digite_a_senha">Digite a senha</string>
 </resources>
