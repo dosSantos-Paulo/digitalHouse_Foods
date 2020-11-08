@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class RestaurantListAdapter(
     private val dataSet: List<Restaurant>
@@ -18,8 +19,7 @@ class RestaurantListAdapter(
         private val closedAt: TextView = view.findViewById(R.id.txt_hour_restaurantCardBox)
 
         fun bind(restaurant: Restaurant) {
-
-//            Picasso.get().load(restaurant.imageUrl).into(image)
+            Picasso.get().load(restaurant.imageUrl).into(image)
             title.text = restaurant.title
             address.text = restaurant.address
             closedAt.text = restaurant.closedAt
