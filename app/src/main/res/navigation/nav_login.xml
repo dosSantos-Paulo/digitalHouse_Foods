@@ -31,5 +31,13 @@
     <fragment
         android:id="@+id/restaurantListFragment"
         android:name="com.example.login.RestaurantListFragment"
-        android:label="RestaurantListFragment" />
+        android:label="RestaurantListFragment" >
+        <action
+            android:id="@+id/action_restaurantListFragment_to_detalheFragment"
+            app:destination="@id/detalheFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalheFragment"
+        android:name="com.example.login.DetalheFragment"
+        android:label="DetalheFragment" />
 </navigation>
