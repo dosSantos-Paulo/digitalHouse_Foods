@@ -16,4 +16,8 @@
     <string name="digite_o_nome">Digite o nome</string>
     <string name="as_senhas_devem_ser_iguais">As senhas devem ser iguais</string>
     <string name="deve_conter">Deve conter entre 4 e 12 caracteres</string>
+    <string name="title">Title</string>
+    <string name="address">Address</string>
+    <string name="closed_at">closed at</string>
+    <string name="restaurant_image">Restaurant image</string>
 </resources>
