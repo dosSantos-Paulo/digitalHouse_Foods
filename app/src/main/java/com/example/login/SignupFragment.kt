@@ -55,7 +55,8 @@ class SignupFragment : Fragment() {
 
 
                 when {
-                    password?.text.toString().trim().length > 12 || password?.text.toString().trim().length < 4 -> {
+                    password?.text.toString().trim().length > MAX_CHARACTER_PASSWORD
+                            || password?.text.toString().trim().length < MIN_CHARACTER_PASSWORD -> {
                         password?.error = getString(R.string.deve_conter)
                     }
                     password?.text.toString().trim() != repeatPassword?.text.toString().trim() -> {
@@ -69,6 +70,11 @@ class SignupFragment : Fragment() {
 
 
         }
+    }
+
+    companion object {
+        const val MIN_CHARACTER_PASSWORD = 4
+        const val MAX_CHARACTER_PASSWORD = 12
     }
 
 }
