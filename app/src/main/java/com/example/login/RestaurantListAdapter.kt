@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class RestaurantListAdapter(
-    private val dataSet: List<Restaurant>
+    private val dataSet: List<Restaurant>,
+    private val listener: (Restaurant) -> Unit
 ):RecyclerView.Adapter<RestaurantListAdapter.meuViewHolder>() {
 
     class meuViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -29,7 +30,9 @@ class RestaurantListAdapter(
     override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: meuViewHolder, position: Int) {
+        val item = dataSet[position]
         holder.bind(dataSet[position])
+        holder.itemView.setOnClickListener { listener(item) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): meuViewHolder {

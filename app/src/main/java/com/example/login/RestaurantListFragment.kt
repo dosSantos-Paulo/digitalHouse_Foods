@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -50,9 +53,13 @@ class RestaurantListFragment : Fragment() {
             "Fecha às 01:00"
         )
 
+        val navController = Navigation.findNavController(view)
         val viewManager = LinearLayoutManager(view.context)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_restaurantList)
-        val viewAdapter = RestaurantListAdapter(arrayListOf(restaurant1,restaurant2,restaurant3,restaurant4))
+        val viewAdapter = RestaurantListAdapter(arrayListOf(restaurant1,restaurant2,restaurant3,restaurant4)){
+            val bundle = bundleOf("IMAGE" to it.imageUrl, "TITLE" to it.title )
+            navController.navigate(R.id.action_restaurantListFragment_to_detalheFragment, bundle)
+        }
 
         recyclerView.apply {
             setHasFixedSize(true)

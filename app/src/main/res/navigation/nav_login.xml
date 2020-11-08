@@ -39,5 +39,9 @@
     <fragment
         android:id="@+id/detalheFragment"
         android:name="com.example.login.DetalheFragment"
-        android:label="DetalheFragment" />
+        android:label="DetalheFragment" >
+        <action
+            android:id="@+id/action_detalheFragment_to_restaurantListFragment"
+            app:destination="@id/restaurantListFragment" />
+    </fragment>
 </navigation>
