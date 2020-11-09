@@ -5,4 +5,5 @@ data class Restaurant(
     val title: String,
     val address: String,
     val closedAt: String,
+    val foodList: List<FoodPlate>
 )
