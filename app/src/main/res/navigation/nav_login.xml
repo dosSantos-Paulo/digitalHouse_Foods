@@ -43,5 +43,14 @@
         <action
             android:id="@+id/action_detalheFragment_to_restaurantListFragment"
             app:destination="@id/restaurantListFragment" />
+        <action
+            android:id="@+id/action_detalheFragment_to_foodPlateFragment"
+            app:destination="@id/foodPlateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodPlateFragment"
+        android:name="com.example.login.FoodPlateFragment"
+        android:label="FoodPlateFragment" >
+
     </fragment>
 </navigation>

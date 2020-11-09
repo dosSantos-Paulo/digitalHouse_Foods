@@ -26,7 +26,11 @@ class RestaurantListFragment : Fragment() {
 
         val plate1 = FoodPlate(
             R.mipmap.ic_oayoma_tumbnail,
-            "Salada com molho de gengibre"
+            "Salada com molho de gengibre",
+            "Sed ut perspiciatis, unde omnis iste natus " +
+                    "error sit voluptatem accusant doloremque " +
+                    "laudantium, totam rem aperiam eaque ipsa, " +
+                    "quae ab illo inventore veritatis."
         )
 
         val restaurant1 = Restaurant(

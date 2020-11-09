@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,7 +41,12 @@ class DetalheFragment : Fragment() {
         val viewManager = GridLayoutManager(view.context, 2)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_detalhe)
         val viewAdapter = PlateListAdapter(plateList as List<FoodPlate>){
-            
+            val bundle = bundleOf(
+                "IMAGE" to it.imageUrl,
+                "TITLE" to it.name,
+                "DESCRIPTION" to it.description
+            )
+            navController.navigate(R.id.action_detalheFragment_to_foodPlateFragment, bundle)
         }
 
         recyclerView.apply {
