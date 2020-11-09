@@ -40,7 +40,7 @@ class DetalheFragment : Fragment() {
         val viewManager = GridLayoutManager(view.context, 2)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_detalhe)
         val viewAdapter = PlateListAdapter(plateList as List<FoodPlate>){
-
+            
         }
 
         recyclerView.apply {
