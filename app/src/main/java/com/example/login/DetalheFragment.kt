@@ -29,11 +29,6 @@ class DetalheFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val plate1 = FoodPlate(
-            R.mipmap.ic_oayoma_tumbnail,
-            "Olha"
-        )
-
         val topImage = view.findViewById<ImageView>(R.id.img_tumbnail_detalhe)
         val restaurantName = view.findViewById<TextView>(R.id.txt_title_detalhe)
         val navController = Navigation.findNavController(view)
