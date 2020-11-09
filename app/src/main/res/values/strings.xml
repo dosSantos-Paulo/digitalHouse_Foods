@@ -22,4 +22,5 @@
     <string name="restaurant_image">Restaurant image</string>
     <string name="pratos_principais">Pratos principais</string>
     <string name="description">Description</string>
+    <string name="splashscreen_picture">SplashScreen picture</string>
 </resources>
