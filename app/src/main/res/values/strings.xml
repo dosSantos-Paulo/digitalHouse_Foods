@@ -20,4 +20,6 @@
     <string name="address">Address</string>
     <string name="closed_at">closed at</string>
     <string name="restaurant_image">Restaurant image</string>
+    <string name="pratos_principais">Pratos principais</string>
+    <string name="description">Description</string>
 </resources>
