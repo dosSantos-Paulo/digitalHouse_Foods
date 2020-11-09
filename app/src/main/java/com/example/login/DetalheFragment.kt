@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.example.login.Restaurant as Restaurant1
 
@@ -27,13 +29,29 @@ class DetalheFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val plate1 = FoodPlate(
+            R.mipmap.ic_oayoma_tumbnail,
+            "Olha"
+        )
+
         val topImage = view.findViewById<ImageView>(R.id.img_tumbnail_detalhe)
         val restaurantName = view.findViewById<TextView>(R.id.txt_title_detalhe)
         val navController = Navigation.findNavController(view)
-        val plateList = arguments?.getStringArrayList("PLATE_LIST")
+        val plateList = arguments?.get("FOOD_LIST")
 
         restaurantName.text = arguments?.getString("TITLE")
         arguments?.getInt("IMAGE")?.let { Picasso.get().load(it).into(topImage) }
+
+        val viewManager = GridLayoutManager(view.context, 2)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_detalhe)
+        val viewAdapter = PlateListAdapter(plateList as List<FoodPlate>){
+
+        }
+
+        recyclerView.apply {
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
 
         view.findViewById<ImageView>(R.id.img_back_detalhe).setOnClickListener {
             navController.navigate(R.id.action_detalheFragment_to_restaurantListFragment)

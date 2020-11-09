@@ -42,7 +42,7 @@ class RestaurantListFragment : Fragment() {
             "Aoyama - Moema",
             "Alameda dos Arapanés, 532 - Moema",
             "Fecha às 00:00",
-            listOf(plate1, plate1)
+            listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
         )
 
         val restaurant3 = Restaurant(
@@ -50,7 +50,7 @@ class RestaurantListFragment : Fragment() {
             "Outback - Moema",
             "Av. Moaci, 187 - Moema, São Paulo",
             "Fecha às 00:00",
-            listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
+            listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
         )
 
         val restaurant4 = Restaurant(

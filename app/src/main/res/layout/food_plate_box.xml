@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
-    android:layout_marginBottom="@dimen/margin_Small"
+    android:layout_margin="@dimen/margin_Small"
     app:cardCornerRadius="@dimen/cornerRadius">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_height="120dp">
 
             <ImageView
-                android:id="@+id/img_tumbnail_restaurantCardBox"
+                android:id="@+id/img_tumbnail_foodBox"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -27,14 +27,14 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txt_foodDescription_detalhe"
+            android:id="@+id/txt_foodDescription_foodBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_Medium"
             android:layout_marginEnd="@dimen/margin_Medium"
             android:layout_marginTop="@dimen/margin_Small"
             android:layout_marginBottom="@dimen/margin_Small"
-            tool:text="@string/description"
+            android:text="@string/description"
             android:gravity="center"
             android:textColor="@color/colorGray"/>
 
