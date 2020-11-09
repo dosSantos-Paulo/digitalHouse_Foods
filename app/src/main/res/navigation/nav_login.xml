@@ -50,7 +50,5 @@
     <fragment
         android:id="@+id/foodPlateFragment"
         android:name="com.example.login.FoodPlateFragment"
-        android:label="FoodPlateFragment" >
-
-    </fragment>
+        android:label="FoodPlateFragment" />
 </navigation>

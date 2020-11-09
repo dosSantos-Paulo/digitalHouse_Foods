@@ -26,14 +26,18 @@ class FoodPlateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val navController = Navigation.findNavController(view)
         val plateImage = view.findViewById<ImageView>(R.id.img_tumbnail_foodPlate)
         val plateTitle = view.findViewById<TextView>(R.id.txt_title_foodPlate)
         val plateDescription = view.findViewById<TextView>(R.id.txt_description_foodPlate)
+        val navController = Navigation.findNavController(view)
 
         arguments?.getInt("IMAGE")?.let { Picasso.get().load(it).into(plateImage) }
         plateTitle.text = arguments?.getString("TITLE")
         plateDescription.text = arguments?.getString("DESCRIPTION")
+
+        view.findViewById<ImageView>(R.id.img_back_plate).setOnClickListener {
+            navController.popBackStack()
+        }
 
     }
 }

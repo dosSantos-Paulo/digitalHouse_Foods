@@ -32,7 +32,7 @@ class SignupFragment : Fragment() {
         val repeatPassword = view.findViewById<TextInputLayout>(R.id.edt_repeatPassword_signup).editText
 
         view.findViewById<ImageView>(R.id.img_back_signup).setOnClickListener {
-            navController.navigate(R.id.action_signupFragment2_to_loginFragment)
+            navController.popBackStack()
         }
 
         view.findViewById<Button>(R.id.btn_register_signup).setOnClickListener {

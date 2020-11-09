@@ -55,7 +55,7 @@ class DetalheFragment : Fragment() {
         }
 
         view.findViewById<ImageView>(R.id.img_back_detalhe).setOnClickListener {
-            navController.navigate(R.id.action_detalheFragment_to_restaurantListFragment)
+            navController.popBackStack()
         }
     }
 }
