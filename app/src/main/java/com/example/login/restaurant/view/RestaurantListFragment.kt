@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -76,25 +77,39 @@ class RestaurantListFragment : Fragment() {
             getString(R.string.rest4_name),
             getString(R.string.rest4_address),
             getString(R.string.rest4_closed),
-            listOf(plate1, plate1, plate1)
+            listOf(plate1, plate2, plate3)
         )
 
         val navController = Navigation.findNavController(view)
         val viewManager = LinearLayoutManager(view.context)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_restaurantList)
-        val viewAdapter = RestaurantListAdapter(arrayListOf(restaurant1,restaurant2,restaurant3,restaurant4)){
+        val viewAdapter =
+            restaurantAdapter(restaurant1, restaurant2, restaurant3, restaurant4, navController)
+
+        recyclerView.apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
+    }
+
+    private fun restaurantAdapter(
+        restaurant1: Restaurant,
+        restaurant2: Restaurant,
+        restaurant3: Restaurant,
+        restaurant4: Restaurant,
+        navController: NavController,
+    ): RestaurantListAdapter {
+        return RestaurantListAdapter(arrayListOf(restaurant1,
+            restaurant2,
+            restaurant3,
+            restaurant4)) {
             val bundle = bundleOf(
                 KEY_TITLE to it.title,
                 KEY_IMAGE to it.imageUrl,
                 KEY_FOOD_LIST to it.foodList
             )
             navController.navigate(R.id.action_restaurantListFragment_to_detalheFragment, bundle)
-        }
-
-        recyclerView.apply {
-            setHasFixedSize(true)
-            layoutManager = viewManager
-            adapter = viewAdapter
         }
     }
 }
