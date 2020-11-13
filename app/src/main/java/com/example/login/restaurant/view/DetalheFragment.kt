@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.login.restaurant.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,17 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.login.R
+import com.example.login.restaurant.model.FoodPlate
 import com.squareup.picasso.Picasso
-import com.example.login.Restaurant as Restaurant1
 
 
 class DetalheFragment : Fragment() {
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

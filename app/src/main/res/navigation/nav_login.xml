@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.login.LoginFragment"
+        android:name="com.example.login.login.view.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,36 +19,30 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment2"
-        android:name="com.example.login.SignupFragment"
+        android:name="com.example.login.login.view.SignupFragment"
         android:label="SignupFragment" >
-        <action
-            android:id="@+id/action_signupFragment2_to_loginFragment"
-            app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_signupFragment2_to_restaurantListFragment"
             app:destination="@id/restaurantListFragment" />
     </fragment>
     <fragment
         android:id="@+id/restaurantListFragment"
-        android:name="com.example.login.RestaurantListFragment"
+        android:name="com.example.login.restaurant.view.RestaurantListFragment"
         android:label="RestaurantListFragment" >
         <action
             android:id="@+id/action_restaurantListFragment_to_detalheFragment"
-            app:destination="@id/detalheFragment" />
+            app:destination="@id/detalheFragment"/>
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
-        android:name="com.example.login.DetalheFragment"
+        android:name="com.example.login.restaurant.view.DetalheFragment"
         android:label="DetalheFragment" >
-        <action
-            android:id="@+id/action_detalheFragment_to_restaurantListFragment"
-            app:destination="@id/restaurantListFragment" />
         <action
             android:id="@+id/action_detalheFragment_to_foodPlateFragment"
             app:destination="@id/foodPlateFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodPlateFragment"
-        android:name="com.example.login.FoodPlateFragment"
+        android:name="com.example.login.restaurant.view.FoodPlateFragment"
         android:label="FoodPlateFragment" />
 </navigation>

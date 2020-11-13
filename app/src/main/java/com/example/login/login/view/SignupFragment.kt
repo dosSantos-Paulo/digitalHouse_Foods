@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.login.login.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.navigation.Navigation
+import com.example.login.R
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 
 class SignupFragment : Fragment() {

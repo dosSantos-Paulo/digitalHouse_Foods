@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.login.restaurant.model
 
 data class FoodPlate (
     val imageUrl: Int,

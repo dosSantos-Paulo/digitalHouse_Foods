@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.login.restaurant.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.login.R
+import com.example.login.restaurant.model.Restaurant
 import com.squareup.picasso.Picasso
 
 class RestaurantListAdapter(

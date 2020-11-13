@@ -1,4 +1,6 @@
-package com.example.login
+package com.example.login.restaurant.model
+
+import com.example.login.restaurant.model.FoodPlate
 
 data class Restaurant(
     val imageUrl: Int,
