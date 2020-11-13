@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.os.bundleOf
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,14 +40,7 @@ class DetalheFragment : Fragment() {
 
         val viewManager = GridLayoutManager(view.context, 2)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_detalhe)
-        val viewAdapter = PlateListAdapter(plateList as List<FoodPlate>){
-            val bundle = bundleOf(
-                KEY_IMAGE to it.imageUrl,
-                KEY_TITLE to it.name,
-                KEY_DESCRIPTION to it.description
-            )
-            navController.navigate(R.id.action_detalheFragment_to_foodPlateFragment, bundle)
-        }
+        val viewAdapter = plateAdapter(plateList, navController)
 
         recyclerView.apply {
             layoutManager = viewManager
@@ -55,6 +49,20 @@ class DetalheFragment : Fragment() {
 
         view.findViewById<ImageView>(R.id.img_back_detalhe).setOnClickListener {
             navController.popBackStack()
+        }
+    }
+
+    private fun plateAdapter(
+        plateList: Any?,
+        navController: NavController,
+    ): PlateListAdapter {
+        return PlateListAdapter(plateList as List<FoodPlate>) {
+            val bundle = bundleOf(
+                KEY_IMAGE to it.imageUrl,
+                KEY_TITLE to it.name,
+                KEY_DESCRIPTION to it.description
+            )
+            navController.navigate(R.id.action_detalheFragment_to_foodPlateFragment, bundle)
         }
     }
 
