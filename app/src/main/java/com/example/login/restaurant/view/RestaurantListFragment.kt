@@ -36,12 +36,24 @@ class RestaurantListFragment : Fragment() {
             getString(R.string.description_plate1)
         )
 
+        val plate2 = FoodPlate(
+            R.mipmap.ic_sisenor_tumbnail,
+            getString(R.string.title_plate2),
+            getString(R.string.description_plate1)
+        )
+
+        val plate3 = FoodPlate(
+            R.mipmap.ic_outback_tumbnail,
+            getString(R.string.title_plate3),
+            getString(R.string.description_plate1)
+        )
+
         val restaurant1 = Restaurant(
             R.mipmap.ic_tonny_tumbnail,
             getString(R.string.rest1_name),
             getString(R.string.rest1_address),
             getString(R.string.rest1_closed),
-            listOf(plate1, plate1, plate1, plate1)
+            listOf(plate1, plate3, plate2, plate1)
         )
 
         val restaurant2 = Restaurant(
@@ -49,7 +61,7 @@ class RestaurantListFragment : Fragment() {
             getString(R.string.rest2_name),
             getString(R.string.rest2_address),
             getString(R.string.rest2_closed),
-            listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
+            listOf(plate2, plate3, plate1, plate2, plate1, plate3, plate2, plate2, plate1, plate3, plate3)
         )
 
         val restaurant3 = Restaurant(
@@ -57,7 +69,7 @@ class RestaurantListFragment : Fragment() {
             getString(R.string.rest3_name),
             getString(R.string.rest3_address),
             getString(R.string.rest3_closed),
-            listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
+            listOf(plate3, plate1, plate2, plate2, plate1, plate3, plate2, plate3, plate1, plate3, plate1)
         )
 
         val restaurant4 = Restaurant(
@@ -86,5 +98,4 @@ class RestaurantListFragment : Fragment() {
             adapter = viewAdapter
         }
     }
-
 }
