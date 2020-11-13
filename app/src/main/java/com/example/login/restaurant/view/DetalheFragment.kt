@@ -32,18 +32,18 @@ class DetalheFragment : Fragment() {
         val topImage = view.findViewById<ImageView>(R.id.img_tumbnail_detalhe)
         val restaurantName = view.findViewById<TextView>(R.id.txt_title_detalhe)
         val navController = Navigation.findNavController(view)
-        val plateList = arguments?.get("FOOD_LIST")
+        val plateList = arguments?.get(KEY_FOOD_LIST)
 
-        restaurantName.text = arguments?.getString("TITLE")
-        arguments?.getInt("IMAGE")?.let { Picasso.get().load(it).into(topImage) }
+        restaurantName.text = arguments?.getString(KEY_TITLE)
+        arguments?.getInt(KEY_IMAGE)?.let { Picasso.get().load(it).into(topImage) }
 
         val viewManager = GridLayoutManager(view.context, 2)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_detalhe)
         val viewAdapter = PlateListAdapter(plateList as List<FoodPlate>){
             val bundle = bundleOf(
-                "IMAGE" to it.imageUrl,
-                "TITLE" to it.name,
-                "DESCRIPTION" to it.description
+                KEY_IMAGE to it.imageUrl,
+                KEY_TITLE to it.name,
+                KEY_DESCRIPTION to it.description
             )
             navController.navigate(R.id.action_detalheFragment_to_foodPlateFragment, bundle)
         }
@@ -56,5 +56,12 @@ class DetalheFragment : Fragment() {
         view.findViewById<ImageView>(R.id.img_back_detalhe).setOnClickListener {
             navController.popBackStack()
         }
+    }
+
+    companion object {
+        const val KEY_FOOD_LIST = "FOOD_LIST"
+        const val KEY_TITLE = "TITLE"
+        const val KEY_IMAGE = "IMAGE"
+        const val KEY_DESCRIPTION = "DESCRIPTION"
     }
 }

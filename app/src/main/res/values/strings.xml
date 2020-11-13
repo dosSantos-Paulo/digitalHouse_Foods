@@ -23,4 +23,18 @@
     <string name="pratos_principais">Pratos principais</string>
     <string name="description">Description</string>
     <string name="splashscreen_picture">SplashScreen picture</string>
+    <string name="title_plate1">Salada com molho de gengibre</string>
+    <string name="description_plate1">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
+    <string name="rest1_name">Tony Roma\'s</string>
+    <string name="rest1_address">Av. Lavandisca, 717, Indianápolis, São Paulo</string>
+    <string name="rest1_closed">Fecha às 22:00</string>
+    <string name="rest2_name">Aoyama - Moema</string>
+    <string name="rest2_address">Alameda dos Arapanés, 532 - Moema</string>
+    <string name="rest2_closed">Fecha às 00:00</string>
+    <string name="rest3_name">Outback - Moema</string>
+    <string name="rest3_address">Av. Moacir, 187 - Moema, São Paulo</string>
+    <string name="rest3_closed">Fecha às 00:00</string>
+    <string name="rest4_name">Sí Señor!</string>
+    <string name="rest4_address">Alameda Jauaperi, 626 - Moema</string>
+    <string name="rest4_closed">Fecha às 01:00</string>
 </resources>

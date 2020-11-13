@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.login.R
 import com.example.login.restaurant.model.FoodPlate
 import com.example.login.restaurant.model.Restaurant
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_FOOD_LIST
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_IMAGE
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_TITLE
 
 class RestaurantListFragment : Fragment() {
 
@@ -29,42 +32,39 @@ class RestaurantListFragment : Fragment() {
 
         val plate1 = FoodPlate(
             R.mipmap.ic_oayoma_tumbnail,
-            "Salada com molho de gengibre",
-            "Sed ut perspiciatis, unde omnis iste natus " +
-                    "error sit voluptatem accusant doloremque " +
-                    "laudantium, totam rem aperiam eaque ipsa, " +
-                    "quae ab illo inventore veritatis."
+            getString(R.string.title_plate1),
+            getString(R.string.description_plate1)
         )
 
         val restaurant1 = Restaurant(
             R.mipmap.ic_tonny_tumbnail,
-            "Tony Roma's",
-            "Av. Lavandisca, 717, Indianápolis, São Paulo",
-            "Fecha às 22:00",
+            getString(R.string.rest1_name),
+            getString(R.string.rest1_address),
+            getString(R.string.rest1_closed),
             listOf(plate1, plate1, plate1, plate1)
         )
 
         val restaurant2 = Restaurant(
             R.mipmap.ic_oayoma_tumbnail,
-            "Aoyama - Moema",
-            "Alameda dos Arapanés, 532 - Moema",
-            "Fecha às 00:00",
+            getString(R.string.rest2_name),
+            getString(R.string.rest2_address),
+            getString(R.string.rest2_closed),
             listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
         )
 
         val restaurant3 = Restaurant(
             R.mipmap.ic_outback_tumbnail,
-            "Outback - Moema",
-            "Av. Moaci, 187 - Moema, São Paulo",
-            "Fecha às 00:00",
+            getString(R.string.rest3_name),
+            getString(R.string.rest3_address),
+            getString(R.string.rest3_closed),
             listOf(plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1, plate1)
         )
 
         val restaurant4 = Restaurant(
             R.mipmap.ic_sisenor_tumbnail,
-            "Sí Señor!",
-            "Alameda Jauaperi, 626 - Moema",
-            "Fecha às 01:00",
+            getString(R.string.rest4_name),
+            getString(R.string.rest4_address),
+            getString(R.string.rest4_closed),
             listOf(plate1, plate1, plate1)
         )
 
@@ -73,9 +73,9 @@ class RestaurantListFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_restaurantList)
         val viewAdapter = RestaurantListAdapter(arrayListOf(restaurant1,restaurant2,restaurant3,restaurant4)){
             val bundle = bundleOf(
-                "TITLE" to it.title,
-                "IMAGE" to it.imageUrl,
-                "FOOD_LIST" to it.foodList
+                KEY_TITLE to it.title,
+                KEY_IMAGE to it.imageUrl,
+                KEY_FOOD_LIST to it.foodList
             )
             navController.navigate(R.id.action_restaurantListFragment_to_detalheFragment, bundle)
         }

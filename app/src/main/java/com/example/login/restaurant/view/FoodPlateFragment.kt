@@ -9,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.login.R
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_DESCRIPTION
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_IMAGE
+import com.example.login.restaurant.view.DetalheFragment.Companion.KEY_TITLE
 import com.squareup.picasso.Picasso
 
 
@@ -30,9 +33,9 @@ class FoodPlateFragment : Fragment() {
         val plateDescription = view.findViewById<TextView>(R.id.txt_description_foodPlate)
         val navController = Navigation.findNavController(view)
 
-        arguments?.getInt("IMAGE")?.let { Picasso.get().load(it).into(plateImage) }
-        plateTitle.text = arguments?.getString("TITLE")
-        plateDescription.text = arguments?.getString("DESCRIPTION")
+        arguments?.getInt(KEY_IMAGE)?.let { Picasso.get().load(it).into(plateImage) }
+        plateTitle.text = arguments?.getString(KEY_TITLE)
+        plateDescription.text = arguments?.getString(KEY_DESCRIPTION)
 
         view.findViewById<ImageView>(R.id.img_back_plate).setOnClickListener {
             navController.popBackStack()
