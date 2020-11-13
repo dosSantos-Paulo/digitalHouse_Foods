@@ -12,10 +12,18 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_signupFragment2"
-            app:destination="@id/signupFragment2" />
+            app:destination="@id/signupFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_loginFragment_to_restaurantListFragment"
-            app:destination="@id/restaurantListFragment" />
+            app:destination="@id/restaurantListFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/signupFragment2"
@@ -23,7 +31,11 @@
         android:label="SignupFragment" >
         <action
             android:id="@+id/action_signupFragment2_to_restaurantListFragment"
-            app:destination="@id/restaurantListFragment" />
+            app:destination="@id/restaurantListFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/restaurantListFragment"
@@ -31,7 +43,11 @@
         android:label="RestaurantListFragment" >
         <action
             android:id="@+id/action_restaurantListFragment_to_detalheFragment"
-            app:destination="@id/detalheFragment"/>
+            app:destination="@id/detalheFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
@@ -39,7 +55,11 @@
         android:label="DetalheFragment" >
         <action
             android:id="@+id/action_detalheFragment_to_foodPlateFragment"
-            app:destination="@id/foodPlateFragment" />
+            app:destination="@id/foodPlateFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/foodPlateFragment"
